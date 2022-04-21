@@ -19,10 +19,14 @@
         <h1>Alto Energy</h1>
         <ul class="home_links">
             <li><a href="{{ url_for('site.home') }}">Home</a></li>
-            <li><a href="{{ url_for('site.profile') }}">Profile</a></li>
             <li><a href="{{ url_for('site.about') }}">About</a></li>
+            <li><a href="{{ url_for('site.profile') }}">Profile</a></li>
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('auth.logout') }}">Log Out</a></li>
+            {% else %}
             <li><a href="{{ url_for('auth.signin') }}">Sign In</a></li>
-            <li><a href="{{ url_for('auth.signup') }}">Sign Up Free!</a></li    >
+            <li><a href="{{ url_for('auth.signup') }}">Sign Up Free!</a></li>
+            {% endif %}
          </ul>    
     </nav>
 
