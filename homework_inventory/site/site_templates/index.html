@@ -4,10 +4,11 @@
 
 
 
+
 <!-- Header Section -->
 <div class="hero-image">
     <div class="hero-text">
-        <h2>Explore the World of Rewewable Energy with Alto</h2>
+        <h2>Explore the World of Renewable Energy with Alto</h2>
         <h5>Create an amazing API tool to connect to Renewable
             Energy Production Developers across the globe</h5>
         <div>
@@ -19,89 +20,106 @@
 </div>
     <!-- End of Header Section -->
 
-    <!-- Start of Middle Section -->
-    <section class="row">
-        <div style="text-align: center;" class="col-12" id="middle-text">
-            <h2>Harness the Power of Renewable Energy!</h2>
-            <h5>
-                You can now harness components of our platform and build<br>
-                powerful integrations for our 2 million users - or simply just for your team.
-            </h5>
-        </div>
-    </section>
-    <!-- End of Middle Section -->
+    <!-- Flask Flashed Message to User -->
+<br>
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+        {% if messages %}
+            {% for cat, msg in messages %}
+                {% if cat == 'user-created' %}
+                    <div class="alert alert-success">
+                        {{ msg}}
+                        <button type="button" class="close" data-dismiss="alert" onclick="this.parentElement.style.display='none'">&times;</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
 
-    <!-- Start of Flex Box -->
-    <div id="beyonce_beyonce_reverse">
-        <div id="beyonce">
-            <div>
-                <h1>Connect With<br>The Community</h1>
-                <h4>We'd love to have you</h4>
-                <p>You're a big reason why Alto is the best renewable energy
-                <br>API platform for developers so please keep in touch!
-                </p>
-                    <br><br>
-            </div>
-        </div>
-        <div id="beyonce_reverse">
-            <div>
-                <img class="triple_three_tree" src="../../static/images/undraw_wind_turbine_x-2-k4.svg"
-                alt="Icon Table">
-            </div>    
+<!-- Start of Middle Section -->
+<section class="row">
+    <div style="text-align: center;" class="col-12" id="middle-text">
+        <h2>Harness the Power of Renewable Energy!</h2>
+        <h5>
+            You can now harness components of our platform and build<br>
+            powerful integrations for our 2 million users - or simply just for your team.
+        </h5>
+    </div>
+</section>
+<!-- End of Middle Section -->
+
+<!-- Start of Flex Box -->
+<div id="beyonce_beyonce_reverse">
+    <div id="beyonce">
+        <div>
+            <h1>Connect With<br>The Community</h1>
+            <h4>We'd love to have you</h4>
+            <p>You're a big reason why Alto is the best renewable energy
+            <br>API platform for developers so please keep in touch!
+            </p>
+                <br><br>
         </div>
     </div>
+    <div id="beyonce_reverse">
+        <div>
+            <img class="triple_three_tree" src="../../static/images/undraw_wind_turbine_x-2-k4.svg"
+            alt="Icon Table">
+        </div>    
+    </div>
+</div>
 
-    <!-- End of Flex Box -->
+<!-- End of Flex Box -->
 
-    <!-- Footer Start -->
-    <footer class="row" id="footer">
-        <div class="col-2 col-md-2">
-            <img src="../../static/images/Coding Drones Logo.png" alt="Coding Drones Logo" id="footer-logo">
+<!-- Footer Start -->
+<footer class="row" id="footer">
+    <div class="col-2 col-md-2">
+        <img src="../../static/images/Coding Drones Logo.png" alt="Coding Drones Logo" id="footer-logo">
+    </div>
+    <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+            <h4>Platform</h4>
+            <p>Why Alto?</p>
+            <p>Enterprise</p>
+            <p>Donate</p>
+            <p>Spread the word</p>
+            <p>Our Process</p>
         </div>
-        <div class="col-2 col-md-2">
-            <div class="footer-text-flex">
-                <h4>Platform</h4>
-                <p>Why Alto?</p>
-                <p>Enterprise</p>
-                <p>Donate</p>
-                <p>Spread the word</p>
-                <p>Our Process</p>
-            </div>
+    </div>
+    <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+            <h4>Features</h4>
+            <p>Design</p>
+            <p>Wireframing</p>
+            <p>Prototyping</p>
+            <p>Collaboration</p>
+            <p>Integrations</p>
         </div>
-        <div class="col-2 col-md-2">
-            <div class="footer-text-flex">
-                <h4>Features</h4>
-                <p>Design</p>
-                <p>Wireframing</p>
-                <p>Prototyping</p>
-                <p>Collaboration</p>
-                <p>Integrations</p>
-            </div>
+    </div>
+    <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+            <h4>Support</h4>
+            <p>Help Center</p>
+            <p>Terms of Service</p>
+            <p>Privacy</p>
+            <p>Status</p>
+            <p>Security</p>
         </div>
-        <div class="col-2 col-md-2">
-            <div class="footer-text-flex">
-                <h4>Support</h4>
-                <p>Help Center</p>
-                <p>Terms of Service</p>
-                <p>Privacy</p>
-                <p>Status</p>
-                <p>Security</p>
-            </div>
+    </div>
+    <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+            <h4>Company</h4>
+            <p>Blog</p>
+            <p>About Us</p>
+            <p>Jobs</p>
+            <p>Contact Us</p>
+            <p>Careers</p>
         </div>
-        <div class="col-2 col-md-2">
-            <div class="footer-text-flex">
-                <h4>Company</h4>
-                <p>Blog</p>
-                <p>About Us</p>
-                <p>Jobs</p>
-                <p>Contact Us</p>
-                <p>Careers</p>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
 
-    <!-- Footer End -->
+<!-- Footer End -->
 
     
 
